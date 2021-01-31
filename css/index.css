@@ -11,14 +11,26 @@ body {
 header{
     text-align: center;
     background-color: #F8F8F8;
-    padding: 2em;
+    padding: 1.5em 0;
+    margin-bottom: 4em;
 }
+
+
+.heading{
+    margin-bottom: 2em;
+}
+
+.heading h1{
+    margin-top: 0;
+}
+
 footer{
     background-color: #143774;
     color: white;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     padding: 3em;
+    margin-top: 3em;
 }
 footer h3{
     font-family: 'Ubuntu', sans-serif;
@@ -38,7 +50,7 @@ h1, h2, h3{
 
 h1{
     font-size: 2.15em;
-    margin-bottom: 0;
+    margin: 0;
     font-weight: 400;
     color: #143774;
 }
@@ -53,19 +65,22 @@ img {
 .subhead {
     font-weight: 700;
     font-size: 0.81rem;
-    margin-top: 0;
+    margin:  0 auto;
     letter-spacing: 2px;
     color: #1792D2;
-    margin-bottom: 2.5em;
 }
 
 .container{
+    width: 90%;
     display: flex;
     flex-direction: column;
     max-width: 980px;
     margin: 0  auto;
-    padding: 2em;
     justify-content: center;
+}
+
+.container-recent{
+    padding-top: 0;
 }
 
 .container h2{
@@ -76,6 +91,7 @@ img {
 .article-recent {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 main {
@@ -102,7 +118,7 @@ main a:hover{
     flex-direction: column;
 }
 .article-featured img{
-    order: -2;
+    order: -1;
 }
 
 .article-featured .cont-space{
@@ -122,12 +138,11 @@ main a:hover{
 }
 
 .article-recent img{
-    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .article-recent .article-extras {
     order: -1;
-    margin-right: 1em;
 }
 
 .about{
@@ -139,7 +154,8 @@ main a:hover{
     flex-direction: column;
 }
 
-.about h2{
+.about h3{
+    font-size: 1rem;
     margin-bottom: 1em;
     order: -2;
 }
@@ -178,7 +194,7 @@ main a:hover{
     margin-top: 0;
     margin-top: 1em;
     padding-bottom: 0;
-    padding-top: 0.3em;
+
 }
 
 .wid-recent {
@@ -194,7 +210,9 @@ main a:hover{
     padding-bottom: 0;
 }
 
-.cont-space {
+.sidebar .cont-space {
+    font-weight: 700;
+    font-size: 1rem;
     letter-spacing: 0.2em;
     color: #1792D2;
 }
@@ -212,16 +230,16 @@ main a:hover{
 .nav {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     list-style: none;
     padding-left: 0;
+    margin-bottom: 0;
 }
 
 .nav-li {
     margin-bottom: 1em;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-left: 2em;
 }
 
 .nav-li a{
@@ -247,6 +265,7 @@ a{
 
 @media (min-width: 650px){
     .container{
+        /* margin-top: 3em; */
         flex-direction: row;
         justify-content: space-between;
     }
@@ -254,14 +273,28 @@ a{
     .container main{
         width: 75%;
         margin-bottom: 0;
+        padding: 0;
+    }
+    .article-recent {
+        margin-bottom: 2em;
+    }
+    .article-recent-rec .article-content h2{
+        padding-top: 0;
+        margin-top: 0;
     }
 
     .container aside{
+        min-width: 180px;
+        margin-left: 1em;
         width: 20%;
     }
 
     .nav{
         flex-direction: row;
+    }
+
+    .nav-li {
+        margin-left: 2em;
     }
 
     .article-recent{
@@ -270,11 +303,11 @@ a{
 
     .article-recent .article-content{
         width: 70%;
-        margin-top: 1.6em;
     }
 
     .article-recent .article-extras{
         width: 30%;
+        margin-right: 2em;
     }
 
 }
@@ -285,7 +318,3 @@ a{
     object-fit: cover;
     margin-bottom: 1.5em;
 }
-
-
-
-
